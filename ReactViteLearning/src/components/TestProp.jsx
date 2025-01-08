@@ -1,9 +1,10 @@
-function TestProp(data, content) {
-  console.log(data, content);
+// eslint-disable-next-line react/prop-types
+function TestProp({ name = "Tôi đang test", content: message }) {
+  // const { name, content } = props; // This is called destructuring. It is used to extract values from an object and assign them to variables.
   return (
     <>
       <h1>
-        {data.content}, {data.name}
+        {message}, {name}
       </h1>
     </>
   );
