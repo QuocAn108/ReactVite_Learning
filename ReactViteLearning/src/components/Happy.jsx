@@ -1,0 +1,7 @@
+export default function Happy() {
+  return (
+    <div>
+      <h1>Happy</h1>
+    </div>
+  );
+}
