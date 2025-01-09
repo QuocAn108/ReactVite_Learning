@@ -1,13 +1,11 @@
-import Category from "./components/Category";
-import NotCategory from "./components/NotCategory";
-
 function App() {
+  const content1 = <div>This is content 1</div>;
+  const content2 = <div>This is content 2</div>;
   const check = false;
   if (check) {
-    return <Category />;
-  } else {
-    return <NotCategory />;
+    return content1;
   }
+  return content2;
 }
 
 export default App;
