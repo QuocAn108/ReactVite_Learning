@@ -1,8 +1,8 @@
-import Course from "./components/Course";
+import Message from "./components/Message";
 function App() {
   return (
     <>
-      <Course />
+      <Message />
     </>
   );
 }
