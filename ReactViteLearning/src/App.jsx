@@ -4,9 +4,9 @@ function App() {
   const handleGetUsername = (e) => {
     setUsername(e.target.value);
   };
-  console.log(username);
   return (
     <>
+      <div>Username: {username}</div>
       <input type="text" onChange={(e) => handleGetUsername(e)} />
     </>
   );
