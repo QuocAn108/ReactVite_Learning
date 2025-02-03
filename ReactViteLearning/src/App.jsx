@@ -19,6 +19,10 @@ function App() {
       name: "",
     });
   };
+  const handleDeleteTodo = (id) => {
+    const newTodoList = todoList.filter((todo) => todo.id !== id);
+    setTodoList(newTodoList);
+  };
   return (
     <div>
       <div>
@@ -45,6 +49,7 @@ function App() {
                   style={{
                     cursor: "pointer",
                   }}
+                  onClick={() => handleDeleteTodo(todo.id)}
                 >
                   X
                 </div>
