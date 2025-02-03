@@ -1,21 +1,55 @@
 import { useState } from "react";
 function App() {
+  const [todo, setTodo] = useState({ id: "", name: "" });
   const [todoList, setTodoList] = useState([
     { id: 1, name: "Danh rang rua mat" },
   ]);
   const handleGetTodo = (value) => {
-    console.log(value);
+    const randomId = Math.floor(Math.random(100000) * 100000);
+    const todo = {
+      id: randomId,
+      name: value,
+    };
+    setTodo(todo);
+  };
+  const handleSubmit = () => {
+    setTodoList([...todoList, todo]);
+    setTodo({
+      id: "",
+      name: "",
+    });
   };
   return (
     <div>
       <div>
-        <input type="text" onChange={(e) => handleGetTodo(e.target.value)} />
-        <button>Add</button>
+        <input
+          type="text"
+          onChange={(e) => handleGetTodo(e.target.value)}
+          value={todo.name}
+        />
+        <button onClick={handleSubmit}>Add</button>
       </div>
       <div>
         <ul>
           {todoList.map((todo, index) => {
-            return <li key={todo.id}>{todo.name}</li>;
+            return (
+              <div
+                style={{
+                  display: "flex",
+                  gap: "30px",
+                }}
+                key={index}
+              >
+                <li>{todo.name}</li>
+                <div
+                  style={{
+                    cursor: "pointer",
+                  }}
+                >
+                  X
+                </div>
+              </div>
+            );
           })}
         </ul>
       </div>
