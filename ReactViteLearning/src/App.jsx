@@ -1,11 +1,21 @@
-import { useState } from "react";
-import Count from "./components/Count";
+import { useState, useRef } from "react";
+
 function App() {
-  const [show, setShow] = useState(false);
+  const [count, setCount] = useState(0);
+  let timerId = useRef();
+  const handleStart = () => {
+    timerId.current = setInterval(() => {
+      setCount((prev) => prev + 1);
+    }, 1000);
+  };
+  const handleStop = () => {
+    clearInterval(timerId.current);
+  };
   return (
     <div>
-      <button onClick={() => setShow(!show)}>Show</button>
-      {show && <Count />}
+      <h1>{count}</h1>
+      <button onClick={handleStart}>start</button>{" "}
+      <button onClick={handleStop}>stop</button>
     </div>
   );
 }
