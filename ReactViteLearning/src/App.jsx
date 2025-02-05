@@ -1,11 +1,13 @@
-import { useState } from "react";
-import Timer from "./components/Timer";
+import { useEffect, useRef } from "react";
+
 function App() {
-  const [show, setShow] = useState(false);
+  const divRef = useRef();
+  useEffect(() => {
+    console.log(divRef.current);
+  }, []);
   return (
     <div>
-      <button onClick={() => setShow(!show)}>Show</button>
-      {show && <Timer />}
+      <div ref={divRef}>Hello</div>
     </div>
   );
 }
