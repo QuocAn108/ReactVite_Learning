@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Timer from "./components/Timer";
+import Count from "./components/Count";
 function App() {
   const [show, setShow] = useState(false);
   return (
     <div>
       <button onClick={() => setShow(!show)}>Show</button>
-      {show && <Timer />}
+      {show && <Count />}
     </div>
   );
 }
