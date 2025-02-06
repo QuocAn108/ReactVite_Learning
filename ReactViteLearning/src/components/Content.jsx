@@ -1,9 +1,13 @@
 import { memo } from "react";
 
 // eslint-disable-next-line react/prop-types
-function Content({ count }) {
+function Content({ handleIncrement }) {
   console.log("rendered child");
-  return <div>Hello {count}</div>;
+  return (
+    <div>
+      <button onClick={handleIncrement}>Increment</button>
+    </div>
+  );
 }
 
 export default memo(Content);
