@@ -1,14 +1,23 @@
-import { useEffect, useRef } from "react";
+import { useState } from "react";
+import Content from "./components/Content";
 
 function App() {
-  const divRef = useRef();
-  useEffect(() => {
-    console.log(divRef.current);
-  }, []);
+  const [count, setCount] = useState(0);
+  const [count2, setCount2] = useState(0);
+  const handleIncrement = () => {
+    setCount(count + 1);
+  };
+  const handleIncrement2 = () => {
+    setCount2(count2 + 1);
+  };
+  console.log("rendered dad");
   return (
-    <div>
-      <div ref={divRef}>Hello</div>
-    </div>
+    <>
+      {count}
+      <button onClick={handleIncrement}>Increment</button>
+      <button onClick={handleIncrement2}>Increment2</button>
+      <Content count={count} />
+    </>
   );
 }
 
