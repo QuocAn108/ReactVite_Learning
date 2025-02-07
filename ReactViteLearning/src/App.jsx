@@ -1,14 +1,18 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useState } from "react";
+import Content from "./components/Content";
 
 function App() {
-  const divRef = useRef();
-  useEffect(() => {
-    console.log(divRef.current);
+  const [count, setCount] = useState(0);
+  const handleIncrement = useCallback(() => {
+    setCount((prev) => prev + 1);
   }, []);
+
+  console.log("rendered dad");
   return (
-    <div>
-      <div ref={divRef}>Hello</div>
-    </div>
+    <>
+      {count}
+      <Content handleIncrement={handleIncrement} />
+    </>
   );
 }
 
