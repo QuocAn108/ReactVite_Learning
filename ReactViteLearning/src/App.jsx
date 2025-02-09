@@ -1,24 +1,15 @@
-import { useReducer } from "react";
+import { createContext, useState } from "react";
+import ListUser from "./components/ListUser";
 
+export const ThemeContext = createContext();
 function App() {
-  const initialState = {
-    count: 0,
-  };
-  const reducer = (state, action) => {
-    switch (action.type) {
-      case "increment":
-        return { count: state.count + 1 };
-      case "decrement":
-        return { count: state.count - 1 };
-    }
-  };
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [theme, setTheme] = useState("dark");
   return (
-    <div>
-      <h1>{state.count}</h1>
-      <button onClick={() => dispatch({ type: "increment" })}>Increment</button>
-      <button onClick={() => dispatch({ type: "decrement" })}>Decrement</button>
-    </div>
+    <>
+      <ThemeContext.Provider value={{ theme, setTheme }}>
+        <ListUser />
+      </ThemeContext.Provider>
+    </>
   );
 }
 
