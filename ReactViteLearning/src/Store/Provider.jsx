@@ -6,7 +6,15 @@ import { intitialState } from "./Constants";
 // eslint-disable-next-line react/prop-types
 const TodoProvider = ({ children }) => {
   const [state, dispath] = useReducer(todoReducer, intitialState);
-  console.log(state);
-  return <TodoContext.Provider>{children}</TodoContext.Provider>;
+  return (
+    <TodoContext.Provider
+      value={{
+        state,
+        dispath,
+      }}
+    >
+      {children}
+    </TodoContext.Provider>
+  );
 };
 export { TodoProvider };

@@ -1,7 +1,9 @@
+import Todolist from "./components/Todolist";
+
 function App() {
   return (
     <>
-      <div>Hello everyone</div>
+      <Todolist />
     </>
   );
 }
