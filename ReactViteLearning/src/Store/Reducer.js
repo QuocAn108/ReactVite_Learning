@@ -3,13 +3,21 @@ const todoReducer = (state, actions) => {
     case "ON_CHANGE":
       return {
         ...state,
-        todoInput: actions.payload,
+        currentInput: actions.payload,
       };
     case "ADD":
       return {
         ...state,
-        todos: [...state.todos, state.todoInput],
+        todos: [...state.todos, state.currentInput],
+        currentInput: "", // Clear input after adding
       };
+    case "DELETE":
+      return {
+        ...state,
+        todos: state.todos.filter((_, index) => index !== actions.payload),
+      };
+    default:
+      return state;
   }
 };
 export { todoReducer };
