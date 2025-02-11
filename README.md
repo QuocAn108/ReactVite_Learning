@@ -1,1 +1,1 @@
-This is my journey of self-learning react-vite, to gain more knowledge on the front-end side and improve my programming skills.
+This is my journey of self-learning react-vite, to gain more knowledge on the front-end side and improve my programming skills.I want to become a backend developer, but i want to know a little bit of frontend.
