@@ -1,9 +1,15 @@
-import Todolist from "./components/Todolist";
-
 function App() {
   return (
     <>
-      <Todolist />
+      <div
+        style={{
+          color: "red",
+          fontSize: "20px",
+          backgroundColor: "black",
+        }}
+      >
+        Hello everyone
+      </div>
     </>
   );
 }
