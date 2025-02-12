@@ -1,15 +1,8 @@
+import "./assets/App.css";
 function App() {
   return (
     <>
-      <div
-        style={{
-          color: "red",
-          fontSize: "20px",
-          backgroundColor: "black",
-        }}
-      >
-        Hello everyone
-      </div>
+      <div className="heading bg">Hello everyone</div>
     </>
   );
 }
