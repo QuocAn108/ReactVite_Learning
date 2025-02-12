@@ -1,9 +1,10 @@
-import Todolist from "./components/Todolist";
-
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 function App() {
   return (
     <>
-      <Todolist />
+      <Header />
+      <Footer />
     </>
   );
 }
