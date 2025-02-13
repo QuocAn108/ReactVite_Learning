@@ -1,10 +1,10 @@
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
+import styles from "./assets/App.module.css";
+import classNames from "classnames";
 function App() {
+  const { heading, text, bg } = styles;
   return (
     <>
-      <Header />
-      <Footer />
+      <div className={classNames(heading, text, bg)}>Hello everyone</div>
     </>
   );
 }
