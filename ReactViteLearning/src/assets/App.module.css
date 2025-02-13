@@ -5,6 +5,13 @@
   text-align: center;
   margin-top: 50px;
 }
+.text {
+  color: blue;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+}
 
 .bg {
   background-color: #f1f1f1;
