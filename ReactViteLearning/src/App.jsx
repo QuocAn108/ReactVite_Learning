@@ -1,10 +1,9 @@
-import styles from "./assets/App.module.css";
-import classNames from "classnames";
+import Button from "./components/Button/Button";
 function App() {
-  const { heading, text, bg } = styles;
   return (
     <>
-      <div className={classNames(heading, text, bg)}>Hello everyone</div>
+      <Button primary />
+      <Button />
     </>
   );
 }
