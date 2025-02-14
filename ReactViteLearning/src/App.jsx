@@ -1,16 +1,18 @@
+import { Link } from "react-router-dom";
+
 function App() {
   return (
     <>
       <div>Hello Everyone</div>
       <ul>
         <li>
-          <a href="/home">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/blog">Blog</a>
+          <Link to="/blog">Blog</Link>
         </li>
         <li>
-          <a href="/about">About</a>
+          <Link to="/about">About</Link>
         </li>
       </ul>
     </>
