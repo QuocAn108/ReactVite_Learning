@@ -1,9 +1,18 @@
-import Button from "./components/Button/Button";
 function App() {
   return (
     <>
-      <Button primary />
-      <Button />
+      <div>Hello Everyone</div>
+      <ul>
+        <li>
+          <a href="/home">Home</a>
+        </li>
+        <li>
+          <a href="/blog">Blog</a>
+        </li>
+        <li>
+          <a href="/about">About</a>
+        </li>
+      </ul>
     </>
   );
 }
